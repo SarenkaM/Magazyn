@@ -6,6 +6,7 @@ items = [{"name:": "Pomidory", "quantity:": 20, "unit:": "kg", "unit_price:": 4.
 
 
 odp = 0
+
 while odp != "exit":
     odp = (input("What would you like to do? "))
     if odp == ("exit"):
@@ -15,5 +16,11 @@ while odp != "exit":
         print("Name\tQuantity\tUnit\tPrice (PLN)")
         for i in items:
             for z in i.values():
-                print(z, "\t", end = " ")
+                print(z, "\t", end = "")
             print("")
+    elif odp == ("add"):
+        name = input("Item name:").capitalize()
+        unit_name = input("unit name:")
+        quantity = input("quantity:")
+        unit_price = input("unit price:")
+        items.append({"name:": name, "quantity:": quantity, "unit:": unit_name, "unit_price:":unit_price})
